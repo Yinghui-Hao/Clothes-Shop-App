@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<style>
+			.mui-bar-nav .mui-pull-right {
+				line-height: 44px;
+				font-size: 16px;
+				font-size: #333;
+			}
+			
+			.mui-input-group .mui-input-row:after {
+				right: 15px;
+			}
+			
+			.mui-input-group .mui-input-row:last-child:after {
+				height: 0;
+			}
+			
+			.mui-input-row .mui-input-clear~.mui-icon-clear {
+				top: 13px;
+			}
+			
+			.mui-input-row .mui-input-password~.mui-icon-eye {
+				top: 13px;
+			}
+			
+			.mui-checkbox input[type='radio']:before,
+			.mui-checkbox input[type='checkbox']:before {
+				font-size: 24px;
+			}
+			
+			.mui-checkbox input[type='checkbox'] {
+				top: 11px;
+			}
+			
+			.mui-input-row input {
+				text-align: right;
+				padding-right: 40px;
+			}
+			
+			.mui-input-row label~input {
+				width: 53%;
+			}
+			
+			.mui-input-row label {
+				color: #9b9b9b;
+				width: 47%;
+			}
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">修改密码</h1>
+		</header>
+		<div class="mui-content login">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>输入原密码</label>
+					<input type="password" class="mui-input-clear">
+				</div>
+				<div class="mui-input-row">
+					<label>输入新密码</label>
+					<input type="password" class="mui-input-clear">
+				</div>
+				<div class="mui-input-row">
+					<label>再次输入新密码</label>
+					<input type="password" class="mui-input-clear">
+				</div>
+			</form>
+
+			<div class="but-box" style="margin-top: 20px;">
+				<button id="set.html" class="queren tz" type="button">确认修改</button>
+			</div>
+		</div>
+
+		<script>
+			mui.init();
+
+			mui("body").on("tap", ".tz", function() {
+				var url = this.getAttribute('id');
+				mui.openWindow({
+					url: url,
+					id: url
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<style>
+			body {
+				background: #fafafa;
+			}
+			
+			.mui-content {
+				background: #fafafa;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">积分规则</h1>
+		</header>
+		<div class="mui-content login">
+			<div class="text">
+				<p class="bt">一、评价的规则与计分方法</p>
+				<p>服装商城会员在个人交易平台使用支付宝服务成功完成每一笔交易后，双方均有权对对方交易的情况作一个评价，这个评价亦称之为信用评价。</p>
+				<p class="bt">二、积分途径</p>
+				<p>(1)评价分为“好评”、“中评”、“差评”三类，每种评价对应一个积分。
+				</p>
+				<p>(2)评价积分的计算方法，具体为：“好评”加一分，“中评”零分，“差评”扣一分。</p>
+				<p>(3)对会员的评价积分进行累积，并在淘宝网页上进行评价积分显示。</p>
+				<p class="bt">三、计分规则（含匿名评价）</p>
+				<p>(1）每个自然月中，相同买家和卖家之间的评价计分不得超过6分（以订单创建的时间计算）。超出计分规则范围的评价将不计分。</p>
+				<p>(2)若14天内相同买卖家之间就同一商品，则多个好评只计1分，多个差评只记-1分。</p>
+				<p class="bt"></p>
+				<p></p>
+			</div>
+
+		</div>
+		<script>
+			mui.init({   swipeBack: true //启用右滑关闭功能
+				  });
+		</script>
+
+	</body>
+
+</html>

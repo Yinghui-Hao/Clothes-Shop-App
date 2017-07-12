@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<style>
+			.mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+				-webkit-touch-callout: none;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-table-view-cell p {
+				color: #333;
+				margin-top: 6px;
+			}
+			
+			.mui-table-view-cell .mui-icon {
+				background: #60dec5;
+				padding: 12px;
+				border-radius: 8px;
+				margin-right: 10px;
+				color: #fff;
+			}
+			
+			.mui-table-view-cell .youhui {
+				background: #ffc464;
+			}
+			
+			.mui-table-view-cell .xitong {
+				background: #ff929f;
+			}
+			
+			.mui-table-view-cell .peisong {
+				background: #45d8ba;
+			}
+			
+			.mui-table-view .mui-media-body label {
+				color: #bababa;
+				font-size: 12px;
+				float: right;
+			}
+			
+			.iconfont {
+				font-family: "iconfont" !important;
+				font-size: 24px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			.add {
+				float: right;
+				margin-top: 10px;
+				color: #F6624D;
+			}
+			
+			.mui-media .mui-ellipsis {
+				color: #9B9B9B ! important;
+				font-size: 14px;
+			}
+			
+			.minus {
+				float: right;
+				margin-top: 10px;
+				color: #7ED321;
+			}
+			
+			.integral-top {
+				height: 137px;
+				background: url(../images/integral_bg.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				position: relative;
+			}
+			
+			.integral-top .interal-banner {
+				margin-top: 50px;
+				margin-left: 43%;
+				position: absolute;
+			}
+			
+			.integral-top p {
+				font-size: 32px;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.integral-top h5 {
+				color: #FFFFFF;
+				text-align: center;
+				margin-top: 15px;
+			}
+			
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			.mui-table-view-cell.mui-active {
+				background-color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的积分</h1>
+			<a class="mui-icon iconfont icon-xiaoxi mui-pull-right tz"></a>
+		</header>
+		<div class="mui-content">
+			<div class="integral-top">
+				<div class="interal-banner">
+					<p>122</p>
+					<h5>总积分</h5>
+				</div>
+
+			</div>
+			<p class="mui-ellipsis" style="padding: 5px 12px;margin-top: 10px;">
+				积分详情
+				<span style="color: #F6624D;float: right;" id="integral-rules">积分规则？</span>
+			</p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<div class="mui-media-body">
+						长袖支付500元
+						<span class="add">+500</span>
+						<p class='mui-ellipsis'>2017-03-28 18:28</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<div class="mui-media-body">
+						长袖西消费200元
+						<span class="minus">-200</span>
+						<p class='mui-ellipsis'>2017-03-28 18:28</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<div class="mui-media-body">
+						注册
+						<span class="add">+20</span>
+						<p class='mui-ellipsis'>2017-03-28 18:28</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+	<script>
+		mui.init({   swipeBack: true //启用右滑关闭功能
+			  });
+		mui("body").on("tap", ".tz", function() {
+			var url = "../chat3.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#integral-rules", function() {
+			var url = "integral-rules.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

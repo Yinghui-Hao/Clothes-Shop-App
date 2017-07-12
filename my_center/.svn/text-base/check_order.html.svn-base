@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<style>
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			
+			.mui-table-view .mui-media-object {
+				line-height: 80px;
+				max-width: 80px;
+				height: 80px;
+				border: 1px solid #ddd;
+				padding: 10px;
+				border-radius: 6px;
+			}
+			
+			.mui-table-view-cell p {
+				margin: 5px 0;
+				color: #333;
+			}
+			
+			.mui-media-body span {
+				color: #e03a3a;
+				font-size: 18px;
+			}
+			
+			.mui-media-body span label {
+				color: #333;
+				float: right;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				padding-left: 15px;
+			}
+			
+			.mui-table-view-cell:after {
+				left: 0px;
+			}
+			
+			.mui-content {
+				margin-bottom: 56px;
+			}
+			
+			.mui-table-view .mui-media-object {
+				line-height: 80px;
+				max-width: 80px;
+				height: 80px;
+				border: 0px solid #ddd;
+				padding: 0px;
+				border-radius: 0px;
+			}
+			
+			/*.mui-media-body {
+				width: 240px;
+			}*/
+			
+			.dingdan-bottom button:last-child {
+				color: #F6624D;
+				border: 1px solid #F6624D;
+			}
+			
+			.dingdan-bottom {
+				border-top: 1px solid #DDDDDD;
+				/*text-align: right;*/
+				padding-right: 15px;
+				padding-bottom: 10px;
+			}
+			
+			.dingdan-bottom span {
+				border-left: 1px solid #ddd;
+				/* margin-left: 3px; */
+				padding-left: 6px;
+			}
+			
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			/*颜色、尺码、价格*/
+			
+			.list-left {
+				float: left;
+				display: inline;
+			}
+			
+			.list-right {
+				float: right;
+				margin-right: 15px;
+				text-align: right;
+			}
+			
+			.goods-but button {
+				width: 100%;
+				float: left;
+				height: 50px;
+				font-size: 16px;
+				border-radius: 0;
+				background: #F7F7F7;
+				color: #9B9B9B;
+				border-top: 1px solid #DDDDDD;
+			}
+			
+			.money-color {
+				color: #F6624D;
+			}
+			
+			.dingdan-bottom p span {
+				color: #F6624D;
+				margin: 0 2px;
+				font-size: 16px;
+			}
+			
+			.dingdan-bottom {
+				border-top: 1px solid #dedede;
+				text-align: right;
+				padding-right: 15px;
+				padding-bottom: 0px;
+			}
+			
+			.icon-dizhi {
+				float: left;
+				margin-top: 10px;
+				margin-right: 10px;
+				color: #BFBFBF;
+				font-size: 28px;
+			}
+			
+			.dizhi {
+				color: #BFBFBF;
+				font-size: 25px;
+			}
+			
+			.address {
+				display: inline-block;
+				color: #4A4A4A !important
+			}
+			
+			.address label {
+				margin-left: 10px;
+			}
+			
+			.icon-bianJiXiuGai {
+				float: right;
+				margin-top: 10px;
+				color: #F6624D;
+				font-size: 22px;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0px;
+			}
+			
+			.dingdan li {
+				background: #fff;
+				padding-left: 0px;
+				margin-top: 6px;
+			}
+			
+			.dingdan .mui-table-view .mui-media,
+			.mui-table-view .mui-media-body {
+				padding-left: 15px;
+			}
+			
+			.dingdanhao {
+				font-size: 16px;
+				color: #333;
+				line-height: 46px;
+				padding: 0px 15px;
+				border-bottom: 1px solid #dedede;
+			}
+			
+			.mui-table-view-cell.mui-active {
+				background-color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">查看订单</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" style="padding: 11px 10px;">
+					<span class="mui-icon iconfont icon-dizhi dizhi" style="font-size: 24px;color: #BFBFBF;"></span>
+					<div class="address">
+						<p>收货人：张三<label>13501234567</label></p>
+						<p style="width: 265px;line-height: 25px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;" class="mui-ellipsis">收货地址：河南省郑州市管城区东明管城区...</p>
+					</div>
+					<!--<span class="mui-icon iconfont icon-bianJiXiuGai"></span>-->
+				</li>
+			</ul>
+			<ul class="dingdan">
+				<li>
+					<div class="details">
+						<p class="dingdanhao">订单号：<span>16158868425686</span></p>
+						<ul class="mui-table-view" style="margin-bottom: 6px;">
+							<li class="mui-table-view-cell mui-media">
+								<!--<a href="javascript:;">-->
+								<img class="mui-media-object mui-pull-left" src="../images/shopping_cart01.png">
+								<div class="mui-media-body mui-ellipsis">
+									2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣
+									<p class="mui-ellipsis">产品编号 AGG20194</p>
+									<!--<span>￥274.00<label>X9</label></span>-->
+								</div>
+								<!--</a>-->
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<div class="list-left">
+									<p>白色：M</p>
+									<p>￥30.00</p>
+								</div>
+								<div class="list-right">
+									<p>￥60.00</p>
+									<p>X2</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<div class="list-left">
+									<p>白色：L</p>
+									<p>￥30.00</p>
+								</div>
+								<div class="list-right">
+									<p>￥60.00</p>
+									<p>X2</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="dingdan-bottom">
+						<p>小计：X4 <span>￥120.00</span></p>
+					</div>
+				</li>
+
+				<li>
+					<div class="details2">
+						<ul class="mui-table-view" style="margin-bottom: 6px;">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="../images/shopping_cart02.png">
+									<div class="mui-media-body mui-ellipsis">
+										2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣
+										<p class="mui-ellipsis">产品编号 AGG20194</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<div class="list-left">
+									<p>白色：M</p>
+									<p>￥30.00</p>
+								</div>
+								<div class="list-right">
+									<p>￥60.00</p>
+									<p>X2</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<div class="list-left">
+									<p>白色：L</p>
+									<p>￥30.00</p>
+								</div>
+								<div class="list-right">
+									<p>￥60.00</p>
+									<p>X2</p>
+								</div>
+							</li>
+
+						</ul>
+						<div class="dingdan-bottom">
+							<p>小计：X4 <span>￥120.00</span></p>
+						</div>
+						<p class="dingdanhao" style="border-bottom: 0px solid #DDDDDD;">备注：<span>请尽快发货~~~</span></p>
+					</div>
+				</li>
+			</ul>
+			<div style="margin-bottom: 20px;">
+				<p class="list-right">创建时间：2017-07-07 10:30</p>
+				<p class="list-right">付款时间：2017-07-07 10:30</p>
+			</div>
+			<div class="goods-but">
+				<button id="shopping-cart.html" type="button" class="tz">实付款：<span class="money-color">￥396.00</span></button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.pullToRefresh.js"></script>
+	<script type="text/javascript" src="../js/mui.pullToRefresh.material.js"></script>
+	<script>
+		mui.init();
+
+		mui("body").on("tap", ".tz", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		mui("body").on("tap", ".lijizhifu", function() {
+			var url = "../payment.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		mui("body").on("tap", ".details", function() {
+			//			var url = "orders-details.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", ".details2", function() {
+			var url = "orders-details2.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", ".details3", function() {
+			var url = "orders-details3.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		mui("body").on("tap", ".tuihuo", function() {
+			var url = "return.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		mui("body").on("tap", ".pingjia", function() {
+			var url = "evaluation.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		(function($) {
+			//阻尼系数
+			var deceleration = mui.os.ios ? 0.003 : 0.0009;
+			$('.mui-scroll-wrapper').scroll({
+				bounce: false,
+				indicators: true, //是否显示滚动条
+				deceleration: deceleration
+			});
+			$.ready(function() {
+				//循环初始化所有下拉刷新，上拉加载。
+				$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+					$(pullRefreshEl).pullToRefresh({
+						down: {
+							callback: function() {
+								var self = this;
+								setTimeout(function() {
+									var ul = self.element.querySelector('.mui-table-view');
+									ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+									self.endPullDownToRefresh();
+								}, 1000);
+							}
+						},
+						up: {
+							callback: function() {
+								var self = this;
+								setTimeout(function() {
+									var ul = self.element.querySelector('.mui-table-view');
+									ul.appendChild(createFragment(ul, index, 5));
+									self.endPullUpToRefresh();
+								}, 1000);
+							}
+						}
+					});
+				});
+				var createFragment = function(ul, index, count, reverse) {
+					var length = ul.querySelectorAll('li').length;
+					var fragment = document.createDocumentFragment();
+					var li;
+					//				for (var i = 0; i < count; i++) {
+					//					li = document.createElement('li');
+					//					li.className = 'mui-table-view-cell';
+					//					li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+					//					fragment.appendChild(li);
+					//				}
+					return fragment;
+				};
+			});
+		})(mui);
+	</script>
+
+</html>

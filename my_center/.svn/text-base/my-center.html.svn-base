@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<script src="../js/iconfont.js"></script>
+		<style>
+			.mui-bar {
+				-webkit-box-shadow: 0 0 0;
+				box-shadow: 0 0 0;
+			}
+			
+			.mui-bar-nav {
+				background-color: #F6624D;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				text-align: center;
+			}
+			
+			.mui-bar-nav {
+				background: no-repeat;
+			}
+			
+			.mui-bar-nav .mui-indexed-list-search-input {
+				background: rgba(250, 250, 250, .8);
+			}
+			
+			.mui-bar-nav~.mui-content {
+				padding-top: 0;
+			}
+			
+			.mui-bar-nav.mui-bar .mui-icon {
+				color: #fff;
+			}
+			
+			.mui-content {
+				margin-bottom: 30px;
+			}
+			
+			.center-top {
+				padding-top: 24px;
+				text-align: center;
+				background: url(../images/my_bg.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				position: relative;
+			}
+			
+			.center-top .mui-navigate-right:after {
+				color: #fff;
+			}
+			
+			.mui-table-view:before {
+				height: 0;
+			}
+			
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.center-list li {
+				position: relative;
+			}
+			
+			.center-list .mui-badge {
+				position: absolute;
+			}
+			
+			.center-top p {
+				padding-bottom: 50px;
+				color: #FFFFFF;
+			}
+			
+			.mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+				-webkit-touch-callout: none;
+			}
+			
+			.center-list2 .mui-icon {
+				font-size: 20px;
+				color: #777777;
+			}
+			
+			.li-bottom {
+				margin-bottom: 5px;
+			}
+			
+			.center-list2 li:last-child {
+				margin-top: 0px;
+			}
+			
+			.center-list li {
+				float: left;
+				width: 25%;
+				text-align: center;
+				color: #333;
+				font-size: 14px;
+				padding: 10px 0;
+			}
+			
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			
+			.mui-bar .mui-badge {
+				background: linear-gradient(#f0ad4e, #f0ad4e);
+			}
+						.cp{
+				background: #FFFFFF;
+				text-align: center;
+				height:40px;
+				padding-top:16px;
+			}
+			.gb-btn{
+				color:#FFFFFF;
+				background: #F6624D;
+				text-align: center;
+				line-height: 30px;
+				height:50px;
+				width:100%;
+				padding-top:10px;
+			}
+			.gb-btn a{
+				color:#FFFFFF;
+			}
+			
+			#sheet3 .mui-table-view .mui-table-view-cell:after {
+		       background-color: #FFFFFF; 
+		     }
+		     .mui-popover.mui-popover-action .mui-table-view {
+		         margin: 0; 
+		   }
+		   /*.icon{
+		       width: 1em; height: 1em;
+		       vertical-align: -0.15em;
+		       fill: currentColor;
+		       overflow: hidden;
+		    }*/
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="position: absolute;">
+			<!--<h1 class="mui-title">个人中心</h1>-->
+			<a href="#sheet3"><span class="mui-icon iconfont icon-fenxiang mui-pull-left"></span></a>
+			<span class="mui-icon mui-icon-chat mui-pull-right tz" id="../chat3.html"></span>
+			<span class="mui-badge"></span>
+		</header>
+		<!--<nav class="mui-bar mui-bar-tab" style="z-index: 999;">
+			<a class="mui-tab-item mui-active tz" href="#tabbar" id="../index.html">
+				<span class="mui-icon iconfont icon-shouye"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-chat" id="../classification.html">
+				<span class="mui-icon iconfont icon-qiapianxingshi"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-contact" id="../shopping-null.html">
+				<span class="mui-icon iconfont icon-gouwuche1"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-map" id="my-center.html">
+				<span class="mui-icon iconfont icon-wode"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>-->
+		<div class="mui-content">
+			<div class="center-top">
+				<div class="tz" id="my-data.html">
+					<img class="touxiang" src="../images/head_img.png" width="60" />
+					<p>大小石榴</p>
+				</div>
+
+			</div>
+			<div class="center-list">
+				<ul>
+					<li>
+						<span class="mui-badge mui-badge-danger">5</span>
+						<span class="mui-icon iconfont icon-daifukuan"></span> 待付款
+					</li>
+					<li>
+						<span class="mui-icon iconfont icon-daifahuo"></span> 待发货
+					</li>
+					<li>
+						<span class="mui-badge mui-badge-danger">35</span>
+						<span class="mui-icon iconfont icon-daishouhuo"></span> 待收货
+					</li>
+					<li>
+						<span class="mui-icon iconfont icon-daipingjia"></span> 待评价
+					</li>
+				</ul>
+			</div>
+			<div class="center-list2">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a>
+							<span class="mui-icon iconfont icon-lianxidianhua"></span>
+							<span>联系客服</span><label>400-6006-666</label>
+							<!--<span class="mui-icon mui-icon-more mui-pull-right"></span>-->
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="my-orders">
+							<span class="mui-icon iconfont icon-aiguifanfile2"></span>
+							<span>我的订单</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="collection">
+							<span class="mui-icon iconfont icon-shoucang"></span>
+							<span>我的收藏</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell li-bottom">
+						<a class="mui-navigate-right" id="address">
+							<span class="mui-icon iconfont icon-dizhi1"></span>
+							<span>收货地址</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="notice">
+							<span class="mui-icon iconfont icon-tongzhi"></span>
+							<span>我的通知</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell li-bottom">
+						<a class="mui-navigate-right" id="integral">
+							<span class="mui-icon iconfont icon-wodejifen"></span>
+							<span>我的积分</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="set">
+							<span class="mui-icon iconfont icon-shezhi"></span>
+							<span>设置</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="sheet3" class="mui-popover mui-popover-bottom mui-popover-action" style="bottom:0;">
+		    <div class="cp">分享到</div>
+			<ul class="mui-table-view mui-grid-view mui-grid-4" style="background:#FFFFFF;padding-top:8px;padding-bottom: 25px;">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+					<svg class="icon" aria-hidden="true" style="height:35px;width:35px">
+					    <use xlink:href="#icon-weixin"></use>
+					</svg>
+					<div class="mui-media-body" style="margin-top:0px;color:#666666">微信</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+	                <svg class="icon" aria-hidden="true" style="height:35px;width:35px">
+				    <use xlink:href="#icon-pengyouquan"></use>
+				    </svg>
+		            <div class="mui-media-body" style="margin-top:0px;color:#666666">朋友圈</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+	                <svg class="icon" aria-hidden="true" style="height:35px;width:35px">
+					    <use xlink:href="#icon-QQ"></use>
+					</svg>
+	                <div class="mui-media-body" style="margin-top:0px;color:#666666">QQ</div></a></li>
+			</ul> 
+			      
+		    <a href="#sheet3"><div class="gb-btn">关闭</div></a>
+		</div>
+	</body>
+
+	<script>
+		mui.init();
+
+		mui("body").on("tap", ".tz", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui(".center-list").on("tap", "li", function() {
+			var url = "my-orders.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#my-orders", function() {
+			var url = "my-orders.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#collection", function() {
+			var url = "collection.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#address", function() {
+			var url = "address.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#notice", function() {
+			var url = "notice.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#integral", function() {
+			var url = "integral.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", "#set", function() {
+			var url = "set.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

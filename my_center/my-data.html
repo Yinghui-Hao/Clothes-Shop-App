@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<style>
+			.mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+				-webkit-touch-callout: none;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-input-group:before {
+				height: 0;
+			}
+			
+			.mui-input-group .mui-input-row:after {
+				height: 0;
+			}
+			
+			.mui-input-group:after {
+				height: 0;
+			}
+			
+			.mui-input-group .mui-input-row {
+				float: right;
+			}
+			
+			.mui-input-group .mui-input-row {
+				height: 28px;
+			}
+			
+			.mui-radio.mui-left label {
+				padding: 0 10px 0 45px;
+			}
+			
+			.mui-radio.mui-left input[type='radio'] {
+				left: 10px;
+			}
+			
+			.mui-radio input[type='radio'] {
+				top: 2px;
+			}
+			
+			.mui-radio input[type='radio']:before,
+			.mui-checkbox input[type='checkbox']:before {
+				font-size: 24px;
+			}
+			
+			.pay-but button {
+				margin-top: 30%;
+			}
+			
+			.data li span {
+				padding-right: 10px;
+			}
+			
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				right: 5px;
+				color: #999;
+			}
+			
+			.data li span img {
+				width: 34px;
+				display: block;
+				border: 0px solid #F6624D;
+				border-radius: 50%;
+			}
+			
+			.mui-radio input[type='radio']:checked:before,
+			.mui-checkbox input[type='checkbox']:checked:before {
+				color: #f6624d;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				padding-right: 15px;
+			}
+			
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn).mui-active {
+				background-color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人资料</h1>
+		</header>
+		<div class="mui-content data">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<label>头像</label>
+						<span><img src="../images/touxiang2.png"/></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell xg">
+					<a class="mui-navigate-right" id="my-data-xiugai.html">
+						<label>昵称</label>
+						<span>12345</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell xg">
+					<a class="mui-navigate-right">
+						<label>联系电话</label>
+						<span>1569632666</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					您的性别
+					<span>
+        	<form class="mui-input-group">
+						<div class="mui-input-row mui-radio mui-left">
+							<label>女</label>
+							<input name="radio1" type="radio">
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>男</label>
+							<input name="radio1" type="radio" checked>
+						</div>
+					</form>
+        </span>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<label>微信号</label>
+						<span>18823667188</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<label>QQ号</label>
+						<span>18823667188</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<label>店铺名称</label>
+						<span>花喵小铺</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">
+						<label>邮箱</label>
+						<span>188sygd@126.com</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pay-but">
+			<button type="button" class="tz" id="my-center.html">确认修改</button>
+		</div>
+	</body>
+
+	<script>
+		mui.init();
+
+		mui("body").on("tap", ".tz", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		mui(".data").on("tap", ".xg", function() {
+			var url = "my-data-xiugai.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

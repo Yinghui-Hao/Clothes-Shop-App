@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/UI/!svn/ver/4441/2017/clothes-shop/unpackage
+END
+.dependencies
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/UI/!svn/ver/4315/2017/clothes-shop/unpackage/.dependencies
+END
+.confirmed_dependencies
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/UI/!svn/ver/4437/2017/clothes-shop/unpackage/.confirmed_dependencies
+END

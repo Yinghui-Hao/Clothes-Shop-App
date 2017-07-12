@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+		<style>
+			.mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+				-webkit-touch-callout: none;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-table-view-cell p {
+				color: #333;
+				margin-top: 6px;
+			}
+			
+			.mui-table-view-cell .mui-icon {
+				background: #60dec5;
+				padding: 12px;
+				border-radius: 8px;
+				margin-right: 10px;
+				color: #fff;
+			}
+			
+			.mui-table-view-cell .youhui {
+				background: #ffc464;
+			}
+			
+			.mui-table-view-cell .xitong {
+				background: #ff929f;
+			}
+			
+			.mui-table-view-cell .peisong {
+				background: #45d8ba;
+			}
+			
+			.mui-table-view .mui-media-body label {
+				color: #bababa;
+				font-size: 12px;
+				float: right;
+			}
+			
+			.iconfont {
+				font-family: "iconfont" !important;
+				font-size: 24px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn).mui-active {
+				background-color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">通知</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span class="mui-icon iconfont icon-tongzhi1 mui-pull-left  youhui"></span>
+						<div class="mui-media-body">
+							支付通知<label>2016-12-23</label>
+
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span class="mui-icon iconfont icon-tongzhi1 mui-pull-left  youhui"></span>
+						<div class="mui-media-body">
+							支付通知<label>2016-12-23</label>
+							<p class="mui-ellipsis">您的账户于2016年12月27日 12:37分 完成了一笔交易</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span class="mui-icon iconfont icon-tongzhi1 mui-pull-left xitong"></span>
+						<div class="mui-media-body">
+							系统通知<label>2016-12-19</label>
+							<p class="mui-ellipsis">鉴于近期有不法分子恶意攻击网站，造成频频退货</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<span class="mui-icon iconfont icon-peisongfangshi mui-pull-left peisong"></span>
+						<div class="mui-media-body">
+							配送提醒<label>2016-12-18</label>
+							<p class="mui-ellipsis">您订购的商品，将于今天下午 16:40 到达，请注意查收</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+	<script>
+		mui.init({   swipeBack: true //启用右滑关闭功能
+			  });
+
+		mui(".mui-table-view").on("tap", "li", function() {
+			var url = "notice-text.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

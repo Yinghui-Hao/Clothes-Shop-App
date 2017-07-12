@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<style>
+			.mui-table-view-cell.mui-active {
+				background: no-repeat;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn).mui-active {
+				background-color: #fff;
+			}
+			/**/
+			
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			/*头部选项卡*/
+			
+			.mui-segmented-control.mui-scroll-wrapper {
+				height: 44px;
+				background: #fff;
+				overflow: hidden;
+			}
+			
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+				width: 100%;
+				height: auto;
+			}
+			
+			.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+				width: 33.3333%;
+				height: 40px;
+				padding: 0;
+				line-height: 43px;
+				font-size: 16px;
+				color: #9b9b9b;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #F6624D;
+				/*border-right: 1px solid #dedede;*/
+			}
+			
+			.mui-scroll {
+				top: 0;
+			}
+			
+			.mui-fullscreen .mui-segmented-control~.mui-slider-group {
+				top: 44px;
+			}
+			
+			.mui-slider .mui-slider-group .mui-navigate-right img {
+				width: 25%;
+				margin-right: 10px;
+			}
+			
+			.mui-slider .mui-slider-group .classification-list-text img {
+				width: 60%;
+			}
+			
+			.mui-scroll-wrapper .mui-card a span {
+				font-size: 16px;
+				color: #333;
+				vertical-align: top;
+				position: absolute;
+				top: 50%;
+				margin-top: -10.5px;
+			}
+			
+			.mui-collapse-content {
+				border-top: 1px solid #dedede;
+			}
+			
+			.mui-slider .mui-slider-group .classification-cuxiao img {
+				width: 20%;
+			}
+			
+			.mui-navigate-right:after,
+			.mui-push-right:after {
+				font-size: 18px;
+			}
+			
+			.mui-input-group .mui-input-row:after {
+				height: 0;
+			}
+			
+			.mui-input-group .mui-input-row {
+				height: auto;
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				margin: 0px 10px;
+				max-width: 110px;
+				max-height: 110px;
+			}
+			
+			.shopping {
+				background: #fff;
+			}
+			
+			.shopping .mui-media-body p {
+				color: #9b9b9b;
+				margin: 0px 0 5px;
+				font-size: 12px;
+			}
+			
+			.mui-icon-arrowright:before {
+				content: '\e583';
+				color: #54BCA7;
+				font-size: 22px;
+				padding-right: 10px;
+			}
+			
+			.mui-input-group {
+				padding-bottom: 10px;
+			}
+			
+			.mui-table-view:after {
+				height: 0;
+				left: 15px;
+			}
+			/*刷新样式*/
+			
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				margin: 0;
+			}
+			
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			
+			.icon-xiaoxi:before {
+				color: #9b9b9b;
+				font-size: 22px;
+			}
+			
+			.lable1 {
+				font-size: 13px;
+				color: #9b9b9b;
+			}
+			
+			.price {
+				color: #F6624D;
+				font-size: 15px;
+				margin-left: 0px;
+			}
+			
+			.lable2 {
+				font-size: 10px;
+				color: #9b9b9b;
+			}
+			
+			.mui-table-view.mui-grid-view .mui-table-view-cell {
+				padding: 0px;
+			}
+			
+			.mui-table-view.mui-grid-view {
+				padding: 0;
+			}
+			
+			.mui-table-view.mui-grid-view .mui-table-view-cell {
+				height: 20px;
+			}
+			
+			.mui-content>.mui-card:first-child {
+				margin-top: 10px;
+			}
+			
+			.mui-btn-outlined {
+				float: right;
+				margin-right: 16px;
+				padding: 3px 4px;
+			}
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			.mui-table-view-cell>a:not(.mui-btn).mui-active {
+				background-color: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#9B9B9B"></a>
+			<h1 class="mui-title">我的收藏</h1>
+			<a class="mui-icon iconfont icon-xiaoxi mui-pull-right tz"></a>
+		</header>
+		<div class="mui-content">
+			<div class="mui-scroll mui-card">
+				<form class="mui-input-group">
+					<ul class="mui-table-view shopping">
+						<li class="mui-table-view-cell mui-media">
+							<img class="mui-media-object mui-pull-left" src="../images/productpic01.png">
+							<div class="mui-media-body mui-ellipsis">
+								<span>2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣</span>
+								<p class="mui-ellipsis">BT-9964
+									<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">取消收藏</button>
+								</p>
+								<ul class="mui-table-view mui-grid-view mui-grid-6 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 m   ui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥32.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥31.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥30.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+
+						</li>
+						<li class="mui-table-view-cell">
+							<img class="mui-media-object mui-pull-left" src="../images/productpic02.png">
+							<div class="mui-media-body mui-ellipsis">
+								<span>2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣</span>
+								<p class="mui-ellipsis">BT-9964
+									<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">取消收藏</button>
+								</p>
+								<ul class="mui-table-view mui-grid-view mui-grid-6 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥32.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥31.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥30.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<img class="mui-media-object mui-pull-left" src="../images/productpic03.png">
+							<div class="mui-media-body mui-ellipsis">
+								<span>2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣</span>
+								<p class="mui-ellipsis">BT-9964
+									<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">取消收藏</button>
+								</p>
+								<ul class="mui-table-view mui-grid-view mui-grid-6 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥32.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥31.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥30.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<img class="mui-media-object mui-pull-left" src="../images/productpic04.png">
+							<div class="mui-media-body mui-ellipsis">
+								<span>2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣</span>
+								<p class="mui-ellipsis">BT-9964
+									<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">取消收藏</button>
+								</p>
+								<ul class="mui-table-view mui-grid-view mui-grid-6 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥32.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥31.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 l" style="text-align: left;">
+										<span class="price">￥30.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-8 mui-col-sm-8 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+		</div>
+	</body>
+	<script>
+		mui.init();
+
+		mui("body").on("tap", ".tz", function() {
+			var url = ('../chat3.html');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

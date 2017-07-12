@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/mui.js"></script>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+
+		<style>
+			body {
+				background: #FAFAFA;
+			}
+			
+			.mui-content {
+				background: #FAFAFA;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-input-group:before {
+				height: 0;
+			}
+			
+			.mui-input-group .mui-input-row:after {
+				height: 0;
+			}
+			
+			.mui-input-group:after {
+				height: 0;
+			}
+			
+			.mui-input-group .mui-input-row {
+				float: right;
+			}
+			
+			.mui-input-group .mui-input-row {
+				height: 28px;
+			}
+			
+			.mui-radio.mui-left label {
+				padding: 0 10px 0 45px;
+			}
+			
+			.mui-radio.mui-left input[type='radio'] {
+				left: 10px;
+			}
+			
+			.mui-radio input[type='radio'] {
+				top: 2px;
+			}
+			
+			.mui-radio input[type='radio']:before,
+			.mui-checkbox input[type='checkbox']:before {
+				font-size: 24px;
+			}
+			
+			.pay-but button {
+				margin-top: 30%;
+			}
+			/**/
+			
+			.aboutcon {
+				text-align: center;
+				padding: 30px 0;
+				background: #fff;
+			}
+			
+			.aboutcon img {
+				width: 70px;
+			}
+			
+			.aboutcon span {
+				display: block;
+				padding-top: 10px;
+				font-weight: bold;
+			}
+			
+			.tell {
+				background: #fff;
+				margin-top: 6px;
+				text-align: center;
+				padding: 10px;
+			}
+			
+			.tell img {
+				width: 24px;
+				vertical-align: middle;
+			}
+			
+			.text {
+				padding: 10px;
+			}
+			
+			.text p {
+				color: #333;
+				text-indent: 2em;
+				font-size: 14px;
+				padding-bottom: 10px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">关于我们</h1>
+			<a class="mui-icon iconfont icon-xiaoxi mui-pull-right tz"></a>
+		</header>
+		<div class="mui-content data">
+			<div class="aboutcon">
+				<img src="../images/shopping.png" />
+				<span>服装批发商城</span>
+			</div>
+			<div class="tell">
+				<span class="mui-icon iconfont icon-lianxidianhua"><label>400-6006-666</label></span>
+				<span class="mui-icon iconfont icon-lianxidianhua" style="margin-left: 18px;"><label>027-8691086</label></span>
+			</div>
+			<div class="text">
+				<p>服装批发商城介绍 服装批发商城客户端是一款实用性信息平台。我们致力于打造国内服装行业最专业、最权威、为用户着想的公共服务平台，包括企业库、产品供求、企业与网络、行业资讯、会展 、人才、行业技术、标准、服装社区等频道，更有独具特色的奶业行业商务和信息化、管理营销、人才等服务体系。客户端以其便捷的浏览方式、强大的应用功能，以及最新的资讯信息为广大客户展示一个丰富多样的信息平台。</p>
+			</div>
+		</div>
+
+	</body>
+
+	<script>
+		mui.init({   swipeBack: true //启用右滑关闭功能
+			  });
+
+		mui("body").on("tap", ".tz", function() {
+			var url = "../chat3.html";
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+
+		mui(".mui-table-view").on("tap", "a", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

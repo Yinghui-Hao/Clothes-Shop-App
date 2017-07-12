@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>服装商城</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<!--<script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>-->
+		<style>
+			.mui-bar-nav {
+				background-color: #F6624D;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				text-align: center;
+			}
+			
+			#search {
+				color: #c7c7c7;
+				width: 80%;
+				height: 30px;
+				margin-top: 7px;
+				text-align: left;
+				background: url(images/search.png) no-repeat #ffffff right;
+				background-size: 24px;
+				font-size: 14px;
+			}
+			
+			#message {
+				float: right;
+				margin-top: 15px;
+				margin-right: 10px;
+			}
+			
+			.mui-content image {
+				width: 100%;
+				height: 357px;
+			}
+			
+			.icon-xiaoxi:before {
+				color: #fff;
+				font-size: 22px;
+			}
+			
+			.nav {
+				height: 88px;
+			}
+			
+			.icon {
+				height: 50px;
+				width: 50px;
+				text-align: center;
+				padding-top: 12px;
+				border-radius: 15px;
+				box-shadow: 0px 1px 1px 1px #CCCCCC;
+			}
+			
+			.icon-shangzhuang08:before,
+			.icon-kuzhuang09:before,
+			.icon-qiku:before {
+				color: #ffffff;
+				font-size: 32px;
+			}
+			
+			.icon-gengduo:before {
+				color: #ffffff;
+				font-size: 26px;
+				margin-top: 9px;
+			}
+			
+			.mui-media-body {
+				font-size: 14px;
+			}
+			
+			.recommend {
+				height: 41px;
+				margin-top: 14px;
+				margin-bottom: 3px;
+				text-align: center;
+			}
+			
+			.orange {
+				background: #F6624D;
+				height: 22px;
+				width: 5px;
+			}
+			
+			.hot {
+				height: 41px;
+				/*background: transparent;*/
+				border: none;
+			}
+			
+			.hot:after {
+				background-color: #c8c7cc;
+			}
+			
+			.list {
+				background: transparent;
+			}
+			
+			.imagedown {
+				z-index: 1;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			
+			.imageup {
+				position: absolute;
+				z-index: 11;
+				top: 0px;
+				right: 0px;
+				max-width: 30%;
+				max-height: 30%;
+			}
+			
+			.mui-card-footer {
+				background: #FFFFFF;
+				overflow: hidden;
+			}
+			
+			.card-footer {
+				text-align: left;
+			}
+			
+			.l {
+				/*font-size: 12px;*/
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#li1 {
+				color: #000000;
+				font-size: 13px;
+				height: auto;
+				text-align: left;
+				line-height: 16px;
+				margin: -1px auto 3px auto;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			
+			.lable1 {
+				font-size: 13px;
+				color: #9b9b9b;
+			}
+			
+			.price {
+				color: #F6624D;
+				font-size: 15px;
+				margin-left: 0px;
+			}
+			
+			.lable2 {
+				font-size: 10px;
+				color: #9b9b9b;
+			}
+			
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+				margin: 0;
+				padding: 0px 3px;
+				vertical-align: top;
+			}
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell .mui-active{
+				background-color: #FFFFFF;
+			}
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell.mui-active{
+				background-color: #FFFFFF;
+			}
+			.biaoti{
+				font-size:16px;
+				margin-left:5px;
+			}
+			.yingwen{
+				color:#999999;
+				font-size: 13px;
+			}
+			.gengduo{
+				color:#999999;
+				font-size: 14px;
+				margin: 3px 5px auto 2px;
+			}
+			.icon-chevron-right:before {
+			    color:#999999;
+			    font-size:14px;
+			}
+			.jiantou{
+				margin:5px 5px auto 2px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="z-index: 999;">
+			<input type="search" id="search" placeholder="产品名称或产品编号" />
+			<a class="mui-icon iconfont icon-xiaoxi mui-pull-right tz" id="chat3.html"></a>
+		</header>
+		<!--<nav class="mui-bar mui-bar-tab" style="z-index: 999;">
+			<a class="mui-tab-item mui-active tz" href="#tabbar" id="index.html">
+				<span class="mui-icon iconfont icon-shouye" ></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-chat" id="classification.html">
+				<span class="mui-icon iconfont icon-qiapianxingshi"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-contact" id="shopping-null.html">
+				<span class="mui-icon iconfont icon-gouwuche1"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-map" id="my_center/my-center.html">
+				<span class="mui-icon iconfont icon-wode"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+	</nav>-->
+		<div class="mui-content">
+			<div class="tz" id="ad-detail.html">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/banner.png">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/banner.png">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/banner.png">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/banner.png">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="mui-table-view mui-grid-view mui-grid-4">
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 tz" id="goods-list.html">
+						<a href="#">
+							<span class="mui-icon iconfont icon-shangzhuang08 icon" style="background: #54bca7;"></span>
+							<div class="mui-media-body">上装</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 tz" id="goods-list.html">
+						<a href="#">
+							<span class="mui-icon iconfont icon-kuzhuang09 icon" style="background:#f47b6e;"></span>
+							<div class="mui-media-body">长裤</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 tz" id="goods-list.html">
+						<a href="#">
+							<span class="mui-icon iconfont icon-qiku icon" style="background:#f5ad51;"></span>
+							<div class="mui-media-body">短裤</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3 mui-text-center tz" id="classification.html">
+						<a href="#">
+							<span class="mui-icon iconfont icon-gengduo icon" style="background:#4aa5e7;"></span>
+							<div class="mui-media-body">更多</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="recommend">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell tz" id="goods-list.html">
+						<span class="mui-pull-left orange"></span>
+						<span class="mui-pull-left biaoti">推荐 &nbsp;·</span>
+						<span class="mui-pull-left yingwen">&nbsp; RECOMMEND</span>
+						<span class="mui-icon iconfont icon-chevron-right mui-pull-right jiantou"></span>
+						<span class="mui-pull-right gengduo">更多</span>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="mui-table-view mui-grid-view mui-grid-4 list tz" id="goods-details.html">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+					<a href="#">
+						<div class="mui-card">
+							<!--内容区-->
+							<div class="mui-card-content">
+								<img src="images/tjpic01.png" class="imagedown" />
+								<img src="images/new.png" class="imageup" />
+							</div>
+							<!--页脚，放置补充信息或支持的操作-->
+							<div class="mui-card-footer">
+
+								<ul class="mui-table-view mui-grid-view mui-grid-9 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 li" id="li1">
+										<span>2017韩版条纹宽松开叉连衣裙韩版条纹宽松2017韩版条纹宽松开叉连衣裙韩版条纹宽松</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1">BT9964</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1"></span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥105.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥100.50</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥95.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+					<a href="#">
+						<div class="mui-card">
+							<!--内容区-->
+							<div class="mui-card-content">
+								<img src="images/tjpic02.png" class="imagedown" />
+								<img src="images/soldout.png" class="imageup" />
+							</div>
+							<!--页脚，放置补充信息或支持的操作-->
+							<div class="mui-card-footer">
+								<ul class="mui-table-view mui-grid-view mui-grid-9 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 li" id="li1">
+										<span>2017韩版条纹宽松开叉连衣裙韩版条纹宽松2017韩版条纹宽松开叉连衣裙韩版条纹宽松</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1">BT9964</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1"></span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥205.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥200.50</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥180.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<div class="hotsell">
+				<ul class="mui-table-view hot tz" id="goods-list.html">
+					<li class="mui-table-view-cell">
+						<span class="mui-pull-left orange"></span>
+						<span class="mui-pull-left biaoti">热销 &nbsp;·</span>
+						<span class="mui-pull-left yingwen">&nbsp; HOT SELLING</span>
+						<span class="mui-icon iconfont icon-chevron-right mui-pull-right jiantou"></span>
+						<span class="mui-pull-right gengduo">更多</span>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="mui-table-view mui-grid-view mui-grid-4 list tz" id="goods-details.html">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+					<a href="#">
+						<div class="mui-card">
+							<!--内容区-->
+							<div class="mui-card-content">
+								<img src="images/rxpic01.png" class="imagedown" />
+								<img src="images/selling.png" class="imageup" />
+							</div>
+							<!--页脚，放置补充信息或支持的操作-->
+							<div class="mui-card-footer">
+								<ul class="mui-table-view mui-grid-view mui-grid-9 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 li" id="li1">
+										<span>2017韩版条纹宽松开叉连衣裙韩版条纹宽松...</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1">BT9964</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1">已销20000件</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥105.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥100.50</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">批发价(3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥95.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6">
+					<a href="#">
+						<div class="mui-card">
+							<!--内容区-->
+							<div class="mui-card-content">
+								<img src="images/rxpic02.png" class="imagedown" />
+								<img src="images/selling.png" class="imageup" />
+							</div>
+							<!--页脚，放置补充信息或支持的操作-->
+							<div class="mui-card-footer">
+								<ul class="mui-table-view mui-grid-view mui-grid-9 card-footer">
+									<li class="mui-table-view-cell mui-media mui-col-xs-12 mui-col-sm-12 li" id="li1">
+										<span>2017韩版条纹宽松开叉连衣裙</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1">BT9964</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6 l" style="text-align: left;">
+										<span class="lable1">已销18000件</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥205.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">零售价 (1-2件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥200.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">批发价 (3-5件)</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-5 mui-col-sm-5 l" style="text-align: left;">
+										<span class="price">￥180.00</span>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-7 mui-col-sm-7 l" style="text-align: left;">
+										<span class="lable2">打包价 (5件以上)</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script>
+			mui.init();
+
+			mui("body").on("tap", ".tz", function() {
+				var url = this.getAttribute('id');
+				mui.openWindow({
+					url: url,
+					id: url
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<style>
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-radio.mui-left label {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 74px;
+			}
+			
+			.mui-radio input[type='radio'] {
+				top: 6px;
+			}
+			
+			.mui-radio.mui-left input[type='radio'] {
+				left: 0;
+			}
+			
+			.mui-radio input[type='radio']:before,
+			.mui-checkbox input[type='checkbox']:before {
+				font-size: 24px;
+			}
+			
+			.mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 11px 10px;
+				-webkit-touch-callout: none;
+			}
+			
+			.mui-radio input[type='radio']:checked:before,
+			.mui-checkbox input[type='checkbox']:checked:before {
+				color: #F6624D;
+			}
+			
+			.icon-dizhi {
+				float: left;
+				margin-top: 10px;
+				margin-right: 10px;
+				color: #BFBFBF;
+				font-size: 28px;
+			}
+			
+			.dizhi {
+				color: #BFBFBF;
+				font-size: 25px;
+			}
+			
+			.address {
+				display: inline-block;
+				color: #4A4A4A !important
+			}
+			
+			.address label {
+				margin-left: 10px;
+			}
+			
+			.icon-bianJiXiuGai {
+				float: right;
+				margin-top: 10px;
+				color: #F6624D;
+				font-size: 22px;
+				margin-right: 10px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">支付</h1>
+		</header>
+		<div class="mui-content payment">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<span class="mui-icon iconfont icon-dizhi dizhi" style="font-size: 24px;color: #BFBFBF;"></span>
+					<div class="address">
+						<p>收货人：张三<label>13501234567</label></p>
+						<p style="width:90%;" class="mui-ellipsis">收货地址：河南省郑州市管城区御玺大厦</p>
+					</div>
+					<span class="mui-icon iconfont icon-bianJiXiuGai" id="my_center/address.html"></span>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" style="margin: 8px 0px;">
+					订单金额：<span>￥396.00</span>
+				</li>
+			</ul>
+			<ul class="mui-table-view zhifu">
+				<li class="mui-table-view-cell">
+					支付方式
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-input-row mui-radio mui-left">
+						<label>支付宝支付</label>
+						<img src="images/pay02.png" />
+						<input name="radio1" type="radio">
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-input-row mui-radio mui-left">
+						<label>微信支付</label>
+						<img src="images/pay03.png" />
+						<input name="radio1" type="radio">
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-input-row mui-radio mui-left">
+						<label>线下付款</label>
+						<img src="images/pay05.png" />
+						<input name="radio1" type="radio">
+					</div>
+				</li>
+			</ul>
+			<div class="pay-but">
+				<button type="button" class="tz" id="my_center/my-orders.html">支付</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		mui.init();
+
+		mui("body").on("tap", ".tz", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+		mui("body").on("tap", ".icon-bianJiXiuGai", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

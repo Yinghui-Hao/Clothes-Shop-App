@@ -1,0 +1,443 @@
+{
+  "index.html": {
+    "resources": [
+      "images/tjpic02.png",
+      "images/soldout.png",
+      "images/new.png",
+      "images/banner.png",
+      "css/mui.css",
+      "images/rxpic02.png",
+      "images/search.png",
+      "images/rxpic01.png",
+      "js/mui.min.js",
+      "images/selling.png",
+      "css/iconfont.css",
+      "images/tjpic01.png",
+      "fonts/iconfont.ttf"
+    ],
+    "refer": [
+      "classification.html",
+      "my_center/my-center.html",
+      "goods-list.html",
+      "shopping-null.html",
+      "goods-details.html",
+      "ad-detail.html",
+      "my_center/notice.html"
+    ]
+  },
+  "classification.html": {
+    "resources": [
+      "images/duanku.png",
+      "images/jiake.png",
+      "images/waiyi.png",
+      "images/dayi.png",
+      "images/Bitmap.png",
+      "images/maoyi.png",
+      "fonts/mui.ttf",
+      "images/taozhuang.png",
+      "css/style.css",
+      "images/T.png",
+      "images/changku.png",
+      "images/shangzhuang.png",
+      "images/majia.png",
+      "js/mui.js",
+      "images/beixin.png",
+      "images/chenshan.png",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "css/mui.css",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf"
+    ],
+    "refer": [
+      "login.html",
+      "goods-list.html",
+      "chat3.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "js/jquery-1.11.1.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "index-main.html"
+    ]
+  },
+  "my_center/my-center.html": {
+    "resources": [
+      "images/my_bg.png",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "images/head_img.png",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "css/mui.css"
+    ],
+    "refer": [
+      "my_center/my-data.html",
+      "my_center/modify.html",
+      "my_center/address.html",
+      "my_center/notice.html",
+      "my_center/set.html",
+      "my_center/collection.html",
+      "my_center/aboutus.html",
+      "my_center/integral.html",
+      "my_center/my-orders.html",
+      "shopping-null.html",
+      "chat3.html"
+    ]
+  },
+  "my_center/my-data.html": {
+    "resources": [
+      "images/touxiang2.png",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "my_center/my-data-xiugai.html",
+      "my_center/my-center.html"
+    ]
+  },
+  "my_center/modify.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "my_center/address.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "my_center/add-address.html"
+    ]
+  },
+  "my_center/notice.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "my_center/notice-text.html"
+    ]
+  },
+  "my_center/set.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "my_center/modify.html",
+      "my_center/aboutus.html",
+      "index.html",
+      "login.html"
+    ]
+  },
+  "my_center/collection.html": {
+    "resources": [
+      "images/productpic04.png",
+      "images/productpic01.png",
+      "images/productpic02.png",
+      "images/productpic03.png",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "chat3.html"
+    ]
+  },
+  "my_center/my-data-xiugai.html": {
+    "resources": [
+      "css/iconfont.css"
+    ],
+    "refer": []
+  },
+  "goods-list.html": {
+    "resources": [
+      "images/productpic04.png",
+      "images/productpic01.png",
+      "images/productpic02.png",
+      "images/productpic03.png",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "css/mui.css"
+    ],
+    "refer": [
+      "goods-details.html",
+      "chat3.html"
+    ]
+  },
+  "goods-details.html": {
+    "resources": [
+      "images/choose_color_size.png",
+      "images/touxiang2.png",
+      "images/profilepic03.png",
+      "images/profilepic02.png",
+      "images/product_details01.jpg",
+      "images/product_details03.png",
+      "js/class.js",
+      "js/jquery.js",
+      "images/productpic01.png",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "css/mui.css",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js"
+    ],
+    "refer": [
+      "confirm_order.html",
+      "chat3.html",
+      "shopping-cart.html"
+    ]
+  },
+  "my_center/aboutus.html": {
+    "resources": [
+      "images/shopping.png",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "chat3.html"
+    ]
+  },
+  "my_center/integral.html": {
+    "resources": [
+      "images/integral_bg.png",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf"
+    ],
+    "refer": [
+      "my_center/integral-rules.html",
+      "chat3.html"
+    ]
+  },
+  "my_center/add-address.html": {
+    "resources": [
+      "js/iconfont.js",
+      "js/mui.poppicker.js",
+      "css/iconfont.css",
+      "css/mui.poppicker.css",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css",
+      "js/mui.picker.js",
+      "css/mui.picker.css",
+      "js/city.data-3.js"
+    ],
+    "refer": []
+  },
+  "my_center/my-orders.html": {
+    "resources": [
+      "images/shopping_cart01.png",
+      "images/shopping_cart02.png",
+      "images/Group 2.png",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf"
+    ],
+    "refer": [
+      "my_center/evaluation.html",
+      "payment.html",
+      "my_center/check_order.html",
+      "index.html",
+      "chat3.html"
+    ]
+  },
+  "my_center/evaluation.html": {
+    "resources": [
+      "css/feedback.css",
+      "images/shopping_cart01.png",
+      "fonts/mui.ttf",
+      "images/shopping_cart02.png",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css",
+      "js/feedback.js",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "my_center/my-orders.html"
+    ]
+  },
+  "payment.html": {
+    "resources": [
+      "images/pay05.png",
+      "images/pay02.png",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "images/pay03.png",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css",
+      "js/jquery.js"
+    ],
+    "refer": [
+      "my_center/my-orders.html",
+      "my_center/address.html"
+    ]
+  },
+  "my_center/check_order.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/shopping_cart01.png",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "images/shopping_cart02.png",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "js/mui.pullToRefresh.material.js"
+    ],
+    "refer": []
+  },
+  "shopping-null.html": {
+    "resources": [
+      "images/gouwuche.png",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css",
+      "js/jquery.js"
+    ],
+    "refer": [
+      "login.html",
+      "index.html"
+    ]
+  },
+  "index-main.html": {
+    "resources": [
+      "index.html",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "css/mui.css"
+    ],
+    "refer": [
+      "shopping-null.html",
+      "index.html",
+      "classification.html",
+      "my_center/my-center.html",
+      "shopping-cart.html"
+    ]
+  },
+  "shopping-cart.html": {
+    "resources": [
+      "images/shopping_cart01.png",
+      "images/shopping_cart02.png",
+      "fonts/mui.ttf",
+      "js/mui.js"
+    ],
+    "refer": [
+      "confirm_order.html"
+    ]
+  },
+  "chat3.html": {
+    "resources": [
+      "js/expression.js",
+      "js/mui.imageViewer.js",
+      "images/yuyin.png",
+      "css/stylejxt.css",
+      "js/DateConvert.js",
+      "css/mui.css",
+      "images/tupian.png",
+      "js/base.js",
+      "images/biaoqing.png",
+      "js/ytx.js",
+      "css/mui.imageviewer.css",
+      "js/mui.js",
+      "js/dbConnect.js",
+      "images/xiangji.png",
+      "js/testplugin.js",
+      "js/jquery.js",
+      "js/arttmpl.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "confirm_order.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/shopping_cart01.png",
+      "js/mui.pullToRefresh.material.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "images/shopping_cart02.png",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "payment.html",
+      "chat3.html"
+    ]
+  },
+  "ad-detail.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/style.css",
+      "images/banner.png",
+      "js/mui.js",
+      "css/mui.css"
+    ]
+  },
+  "my_center/integral-rules.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.css"
+    ]
+  }
+}

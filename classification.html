@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style>
+		 .mui-table-view-cell.mui-active{
+				background: no-repeat;
+			}
+			.mui-table-view-cell > a:not(.mui-btn).mui-active{
+			    background-color: #fff;
+			}
+			/**/
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			/*头部选项卡*/
+			.mui-segmented-control.mui-scroll-wrapper{
+				height: 44px;
+				background: #fff;
+				overflow: hidden;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+				width: 100%;
+				height: auto;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+				width: 40%;
+				margin: 0 2.5%;
+				padding: 0;
+				line-height: 43px;
+				font-size: 16px;
+				color: #9b9b9b;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				color: #54bca7;
+				border-bottom: 1px solid #54bca7;
+			}
+			.mui-scroll{
+				top: 0;
+			}
+			.mui-fullscreen .mui-segmented-control ~ .mui-slider-group{
+				top: 44px;
+			}
+			.mui-slider .mui-slider-group .mui-navigate-right img {
+			    width: 12%;
+			    margin:5px 50px;
+			    
+			}
+			.mui-slider .mui-slider-group .classification-list-text img {
+			    width: 38%;
+			   /* max-width: 100%;*/
+			    height:35px;
+			}
+			.mui-scroll-wrapper .mui-card a span {
+			    font-size: 16px;
+			    color: #333;
+			    vertical-align: top;
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10.5px;
+			}
+			.mui-collapse-content{
+				border-top: 1px solid #dedede;
+				
+			}
+			/*.mui-slider .mui-slider-group .classification-cuxiao img{
+				    width: 25%;
+			}*/
+			.mui-navigate-right:after, .mui-push-right:after{
+				font-size: 18px;
+			}
+			.mui-table-view-cell > a:not(.mui-btn) {	   
+			     /*padding: 11px;*/
+			     height: 90px;
+			}
+			.mui-navigate-right:after, .mui-push-right:after {
+			    font-size: 18px;
+			    margin-right:20px;
+			}
+			.icon-xiaoxi:before{
+		    	color: #9b9b9b;
+		    	font-size: 22px;
+		    }
+		</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#9B9B9B"></a>-->
+	    <h1 class="mui-title">分类</h1>
+	    <a class="mui-icon iconfont icon-xiaoxi mui-pull-right tz" id="chat3.html"></a>
+	</header>
+	<!--<nav class="mui-bar mui-bar-tab" style="z-index: 999;">
+			<a class="mui-tab-item tz" href="#tabbar" id="index.html">
+				<span class="mui-icon iconfont icon-shouye" ></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item mui-active tz" href="#tabbar-with-chat" id="classification.html">
+				<span class="mui-icon iconfont icon-qiapianxingshi"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-contact" id="shopping-null.html">
+				<span class="mui-icon iconfont icon-gouwuche1"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-map" id="my_center/my-center.html">
+				<span class="mui-icon iconfont icon-wode"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+	</nav>-->
+	<div class="mui-content" style="margin-bottom: 50px;">
+		<div id="slider" class="mui-slider mui-fullscreen">
+			
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll mui-card">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse mui-active">
+								<a class="mui-navigate-right" href="#"><img src="images/shangzhuang.png"/><span>上装</span></a>
+								<div class="mui-collapse-content">
+									<ul class="classification-list-text">
+										<li>
+											<img src="images/majia.png"/>
+											<span>马甲</span>
+										</li>
+										<li>
+											<img src="images/beixin.png"/>
+											<span>背心</span>
+										</li>
+										<li>
+											<img src="images/chenshan.png"/>
+											<span>衬衫</span>
+										</li>
+										<li>
+											<img src="images/T.png"/>
+											<span>T恤</span>
+										</li>
+										<li>
+											<img src="images/maoyi.png" style="margin-top:30px"/>
+											<span>毛衣</span>
+										</li>
+										<li>
+											<img src="images/waiyi.png" style="margin-top:30px"/>
+											<span>外衣</span>
+										</li>
+										<li>
+											<img src="images/jiake.png" style="margin-top:30px"/>
+											<span>夹克</span>
+										</li>
+										<li>
+											<img src="images/dayi.png" style="margin-top:30px;width:30%"/>
+											<span>大衣</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#"><img src="images/changku.png" style="width:7%;margin:4px 60px;"/><span>长裤</span></a>
+								<div class="mui-collapse-content">
+									<ul class="classification-list-text">
+										<li>
+											<img src="images/majia.png"/>
+											<span>马甲</span>
+										</li>
+										<li>
+											<img src="images/beixin.png"/>
+											<span>背心</span>
+										</li>
+										<li>
+											<img src="images/chenshan.png"/>
+											<span>衬衫</span>
+										</li>
+										<li>
+											<img src="images/T.png"/>
+											<span>T恤</span>
+										</li>
+										<li>
+											<img src="images/maoyi.png" style="margin-top:30px"/>
+											<span>毛衣</span>
+										</li>
+										<li>
+											<img src="images/waiyi.png" style="margin-top:30px"/>
+											<span>外衣</span>
+										</li>
+										<li>
+											<img src="images/jiake.png" style="margin-top:30px"/>
+											<span>夹克</span>
+										</li>
+										<li>
+											<img src="images/dayi.png" style="margin-top:30px;width:30%"/>
+											<span>大衣</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#"><img src="images/duanku.png"  style="width:13%;margin:9px 48px;"/><span>短裤</span></a>
+								<div class="mui-collapse-content">
+									<ul class="classification-list-text">
+										<li>
+											<img src="images/majia.png"/>
+											<span>马甲</span>
+										</li>
+										<li>
+											<img src="images/beixin.png"/>
+											<span>背心</span>
+										</li>
+										<li>
+											<img src="images/chenshan.png"/>
+											<span>衬衫</span>
+										</li>
+										<li>
+											<img src="images/T.png"/>
+											<span>T恤</span>
+										</li>
+										<li>
+											<img src="images/maoyi.png" style="margin-top:30px"/>
+											<span>毛衣</span>
+										</li>
+										<li>
+											<img src="images/waiyi.png" style="margin-top:30px"/>
+											<span>外衣</span>
+										</li>
+										<li>
+											<img src="images/jiake.png" style="margin-top:30px"/>
+											<span>夹克</span>
+										</li>
+										<li>
+											<img src="images/dayi.png" style="margin-top:30px;width:30%"/>
+											<span>大衣</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#"><img src="images/Bitmap.png" style="width:10%;margin:9px 55px;"/><span>裙装</span></a>
+								<div class="mui-collapse-content">
+									<ul class="classification-list-text">
+										<li>
+											<img src="images/majia.png"/>
+											<span>马甲</span>
+										</li>
+										<li>
+											<img src="images/beixin.png"/>
+											<span>背心</span>
+										</li>
+										<li>
+											<img src="images/chenshan.png"/>
+											<span>衬衫</span>
+										</li>
+										<li>
+											<img src="images/T.png"/>
+											<span>T恤</span>
+										</li>
+										<li>
+											<img src="images/maoyi.png" style="margin-top:30px"/>
+											<span>毛衣</span>
+										</li>
+										<li>
+											<img src="images/waiyi.png" style="margin-top:30px"/>
+											<span>外衣</span>
+										</li>
+										<li>
+											<img src="images/jiake.png" style="margin-top:30px"/>
+											<span>夹克</span>
+										</li>
+										<li>
+											<img src="images/dayi.png" style="margin-top:30px;width:30%"/>
+											<span>大衣</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#"><img src="images/taozhuang.png" /><span>套装</span></a>
+								<div class="mui-collapse-content" style="margin-bottom: 50px;">
+									<ul class="classification-list-text">
+										<li>
+											<img src="images/majia.png"/>
+											<span>马甲</span>
+										</li>
+										<li>
+											<img src="images/beixin.png"/>
+											<span>背心</span>
+										</li>
+										<li>
+											<img src="images/chenshan.png"/>
+											<span>衬衫</span>
+										</li>
+										<li>
+											<img src="images/T.png"/>
+											<span>T恤</span>
+										</li>
+										<li>
+											<img src="images/maoyi.png" style="margin-top:30px"/>
+											<span>毛衣</span>
+										</li>
+										<li>
+											<img src="images/waiyi.png" style="margin-top:30px"/>
+											<span>外衣</span>
+										</li>
+										<li>
+											<img src="images/jiake.png" style="margin-top:30px"/>
+											<span>夹克</span>
+										</li>
+										<li>
+											<img src="images/dayi.png" style="margin-top:30px;width:30%"/>
+											<span>大衣</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/mui.pullToRefresh.js" ></script>
+<script type="text/javascript" src="js/mui.pullToRefresh.material.js" ></script>
+<script>
+	mui.init();
+	
+	mui("body").on("tap",".tz",function(){
+		var url = this.getAttribute('id');
+		mui.openWindow({
+			url:url,
+			id:url
+		});
+	});
+	
+	mui(".classification-list-text").on("tap","li",function(){
+		var url = "goods-list.html";
+		mui.openWindow({
+			url:url,
+			id:url
+		});
+	});
+	
+	mui(".daojishi").on("tap","button",function(){
+		var url = "goods-details-xsg.html";
+		mui.openWindow({
+			url:url,
+			id:url
+		});
+	});
+	
+	
+	(function($) {
+		//阻尼系数
+		var deceleration = mui.os.ios?0.003:0.0009;
+		$('.mui-scroll-wrapper').scroll({
+			bounce: false,
+			indicators: true, //是否显示滚动条
+			deceleration:deceleration
+		});
+		$.ready(function() {
+			//循环初始化所有下拉刷新，上拉加载。
+			$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+				$(pullRefreshEl).pullToRefresh({
+//					down: {
+//						callback: function() {
+//							var self = this;
+//							setTimeout(function() {
+//								var ul = self.element.querySelector('.mui-table-view');
+//								ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+//								self.endPullDownToRefresh();
+//							}, 1000);
+//						}
+//					},
+//					up: {
+//						callback: function() {
+//							var self = this;
+//							setTimeout(function() {
+//								var ul = self.element.querySelector('.mui-table-view');
+//								ul.appendChild(createFragment(ul, index, 5));
+//								self.endPullUpToRefresh();
+//							}, 1000);
+//						}
+//					}
+				});
+			});
+			var createFragment = function(ul, index, count, reverse) {
+				var length = ul.querySelectorAll('li').length;
+				var fragment = document.createDocumentFragment();
+				var li;
+//				for (var i = 0; i < count; i++) {
+//					li = document.createElement('li');
+//					li.className = 'mui-table-view-cell';
+//					li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+//					fragment.appendChild(li);
+//				}
+				return fragment;
+			};
+		});
+	})(mui);
+</script>
+
+</html>

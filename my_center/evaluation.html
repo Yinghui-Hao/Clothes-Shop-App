@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="feedback">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--<script src="../js/mui.js"></script>-->
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/feedback.css" />
+		<style>
+			.mui-table-view .mui-media-object {
+				line-height: 80px;
+				max-width: 80px;
+				height: 80px;
+				border: 1px solid #ddd;
+				padding: 10px;
+				border-radius: 6px;
+			}
+			
+			.mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 11px 15px;
+				-webkit-touch-callout: none;
+			}
+			
+			.mui-table-view-cell p {
+				margin: 5px 0;
+				color: #333;
+			}
+			
+			.mui-media-body span {
+				color: #e03a3a;
+				font-size: 18px;
+			}
+			
+			.mui-media-body span label {
+				color: #333;
+				float: right;
+				font-size: 14px;
+			}
+			
+			.mui-table-view:before {
+				height: 0;
+			}
+			
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-radio.mui-left input[type='radio'],
+			.mui-checkbox.mui-left input[type='checkbox'] {
+				left: 0px;
+			}
+			
+			.dingdanhao {
+				background: #fff;
+				margin-left: 15px;
+			}
+			
+			.mui-content {
+				background: #fff;
+			}
+			
+			textarea {
+				background: #f7f7f7;
+				border: 1px solid #dedede;
+			}
+			
+			.pay-but button {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			.mui-table-view .mui-media-object {
+				line-height: 80px;
+				max-width: 80px;
+				height: 80px;
+				border: 0px solid #ddd;
+				padding: 0px;
+				border-radius: 0px;
+			}
+			
+			.feedback p {
+				padding: 0;
+			}
+			
+			.feedback .image-item .image-up {
+				height: 65px;
+				width: 65px;
+				border-radius: 10px;
+				line-height: 52px;
+				border: 1px solid #ccc;
+				color: #ccc;
+				display: inline-block;
+				text-align: center;
+			}
+			
+			.mui-table-view-cell:after {
+				background-color: #DDDDDD;
+			}
+			
+			.dingdanhao {
+				border-bottom: 1px solid #DDDDDD;
+			}
+			
+			.feedback .image-list {
+				padding: 10px 15px;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn).mui-active {
+				background-color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">评价</h1>
+		</header>
+		<div class="mui-content">
+			<p class="dingdanhao">订单号：<span>16158868425686</span></p>
+			<ul class="mui-table-view" style="margin-bottom: 6px;">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/shopping_cart01.png">
+						<div class="mui-media-body mui-ellipsis">
+							2017夏季新款娃娃领碎花雪纺女日系小清新一字领荷叶边短袖上衣
+							<p class="mui-ellipsis">产品编号 AGG20194</p>
+							<span>￥274.00<label>X9</label></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div style="padding: 0 15px;">
+				<textarea placeholder="请输入评价内容"></textarea>
+			</div>
+			<div id='image-list' class="row image-list"></div>
+		</div>
+
+		<div class="pay-but">
+			<button type="button" class="tz" id="my-orders.html">提交评价</button>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/feedback.js"></script>
+	<script>
+		mui.init();
+		mui('.mui-scroll-wrapper').scroll();
+
+		mui("body").on("tap", ".tz", function() {
+			var url = this.getAttribute('id');
+			mui.openWindow({
+				url: url,
+				id: url
+			});
+		});
+	</script>
+
+</html>

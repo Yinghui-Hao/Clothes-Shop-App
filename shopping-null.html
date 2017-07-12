@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style>
+		.icon-xiaoxi:before{
+		    	color: #9b9b9b;
+		    	font-size: 22px;
+		}	
+		</style>
+
+</head>
+<body style="background: #fafafa;">
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">购物车</h1>
+	    <a class="mui-icon iconfont icon-xiaoxi mui-pull-right tz" id="chat3.html"></a>
+	</header>
+	<div class="mui-content shopping-null" style="background: #fafafa;">
+		<img class="gouwuche" src="images/gouwuche.png"/>
+		<p>购物车空空如也，快去挑选商品吧~<br>或登录查看购物车</p>
+		<button type="button" class="tz2">去逛逛</button>
+		<button type="button" class="denglu tz" id="login.html">登录</button>
+	</div>
+	
+	<!--<nav class="mui-bar mui-bar-tab" style="z-index: 999;">
+			<a class="mui-tab-item tz" href="#tabbar" id="index.html">
+				<span class="mui-icon iconfont icon-shouye" ></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-chat" id="classification.html">
+				<span class="mui-icon iconfont icon-qiapianxingshi"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item mui-active tz" href="#tabbar-with-contact" id="shopping-null.html">
+				<span class="mui-icon iconfont icon-gouwuche1"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item tz" href="#tabbar-with-map" id="my_center/my-center.html">
+				<span class="mui-icon iconfont icon-wode"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+	</nav>-->
+	
+</body>
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script>
+	mui.init();
+	
+	mui("body").on("tap",".tz",function(){
+		var url = this.getAttribute('id');
+		mui.openWindow({
+			url:url,
+			id:url
+		});
+	});
+	
+	mui("body").on("tap",".tz2",function(){
+		var url = "index-main.html";
+		mui.openWindow({
+			url:url,
+			id:url
+		});
+	});
+	
+	var oW = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+	var oH = (window.innerHeight > 0) ? window.innerHeight: screen.Height;
+
+</script>
+
+</html>
